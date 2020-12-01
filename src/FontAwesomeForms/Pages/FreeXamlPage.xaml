@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<models:FontPageBase xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:FontAwesomeForms.Models"
+             x:Class="FontAwesomeForms.Pages.FreeXamlPage"
+             Title="{Binding Title}">
+    <ContentPage.Content>
+
+        <StackLayout>
+            <Label Text="Binding Page"/>
+
+            <Label Text="&#xf274;" FontFamily="FAFreeRegular"/>
+        </StackLayout>
+    </ContentPage.Content>
+</models:FontPageBase>
