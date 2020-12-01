@@ -9,9 +9,9 @@ namespace FontAwesomeForms.ViewModels
     {
         public ObservableCollection<FontInformation> Fonts { get; }
 
-        public string Glyph1 { get; } = "\uf2db";
+        public string Glyph1 { get; } = FontAwesome.FontAwesomeIcons.Ufo;
 
-        public string Glyph2 { get; } = "\ue048";
+        public string Glyph2 { get; } = FontAwesome.FontAwesomeIcons.PortalExit;
 
         public string FontFamily { get; } = FontConstants.FontAwesomePro.Light;
 

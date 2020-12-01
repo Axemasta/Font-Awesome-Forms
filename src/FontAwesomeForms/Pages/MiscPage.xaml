@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<models:FontPageBase xmlns="http://xamarin.com/schemas/2014/forms"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                     xmlns:models="clr-namespace:FontAwesomeForms.Models"
+                     xmlns:controls="clr-namespace:FontAwesomeForms.Controls"
+                     xmlns:fa="clr-namespace:FontAwesome"
+                     x:Class="FontAwesomeForms.Pages.MiscPage"
+                     Title="Misc">
+
+    <NavigationPage.TitleView>
+        <controls:GlyphTitleView Title="Misc" Glyph1="{x:Static fa:FontAwesomeIcons.Cookie}" Glyph2="{x:Static fa:FontAwesomeIcons.MapMarked}" FontFamily="FAFreeSolid"/>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20">
+                <Label Text="You can put font into images!"/>
+
+                <Image>
+                    <Image.Source>
+                        <FontImageSource Glyph="{x:Static fa:FontAwesomeIcons.Info}" FontFamily="FAFreeSolid"/>
+                    </Image.Source>
+                </Image>
+
+                <Image HeightRequest="75">
+                    <Image.Source>
+                        <FontImageSource Glyph="{x:Static fa:FontAwesomeIcons.ObjectGroup}" FontFamily="FAFreeRegular"/>
+                    </Image.Source>
+                </Image>
+
+                <Label Text="Buttons"/>
+
+                <Button Text="{x:Static fa:FontAwesomeIcons.Fire}" FontFamily="FAFreeSolid"/>
+
+                <ImageButton BackgroundColor="Gray" Padding="5">
+                    <ImageButton.Source>
+                        <FontImageSource Glyph="{x:Static fa:FontAwesomeIcons.Biking}" FontFamily="FAFreeSolid"/>
+                    </ImageButton.Source>
+                </ImageButton>
+
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="The world is your lobster "/>
+                            <Span Text="{x:Static fa:FontAwesomeIcons.GlobeEurope}" FontFamily="FAFreeSolid"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</models:FontPageBase>

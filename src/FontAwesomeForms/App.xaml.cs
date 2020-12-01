@@ -42,6 +42,7 @@ namespace FontAwesomeForms
                 codeFree
             };
 
+            //Pro - Uncomment if you installed pro fonts :)
             var proViewModel = new ProFontsViewModel();
 
             var xamlPro = new XamlPage(proViewModel);
@@ -49,6 +50,8 @@ namespace FontAwesomeForms
 
             pages.Add(xamlPro);
             pages.Add(codePro);
+
+            pages.Add(new MiscPage());
 
             foreach (var page in pages)
             {
@@ -66,6 +69,8 @@ namespace FontAwesomeForms
 
                 tabbed.Children.Add(nav);
             }
+
+
 
             return tabbed;
         }

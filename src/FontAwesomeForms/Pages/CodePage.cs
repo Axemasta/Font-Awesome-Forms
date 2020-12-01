@@ -11,8 +11,10 @@ namespace FontAwesomeForms.Pages
     {
         public CodePage(object viewModel)
         {
-            base.Glyph = "\uf121";
+            base.Glyph = FontAwesome.FontAwesomeIcons.Code;
             base.FontFamily = FontConstants.FontAwesomeFree.Solid;
+
+            this.Padding = new Thickness(10);
 
             Content = BuildView();
 

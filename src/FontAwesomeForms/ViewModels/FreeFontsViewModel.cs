@@ -9,9 +9,9 @@ namespace FontAwesomeForms.ViewModels
     {
         public ObservableCollection<FontInformation> Fonts { get; }
 
-        public string Glyph1 { get; } = "\uf53a";
+        public string Glyph1 { get; } = FontAwesome.FontAwesomeIcons.Atom;
 
-        public string Glyph2 { get; } = "\uf51e";
+        public string Glyph2 { get; } = FontAwesome.FontAwesomeIcons.Splotch;
 
         public string FontFamily { get; } = FontConstants.FontAwesomeFree.Solid;
 
