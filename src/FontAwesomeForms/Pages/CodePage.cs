@@ -19,6 +19,8 @@ namespace FontAwesomeForms.Pages
             base.BindingContext = viewModel;
 
             this.SetBinding(TitleProperty, "Title", stringFormat: "Code {0}");
+
+            SetTitleView();
         }
 
         View BuildView()
@@ -51,6 +53,18 @@ namespace FontAwesomeForms.Pages
             });
 
             return collectionView;
+        }
+
+        void SetTitleView()
+        {
+            var titleView = new GlyphTitleView();
+
+            titleView.SetBinding(GlyphTitleView.TitleProperty, "Title", stringFormat: "Code {0}");
+            titleView.SetBinding(GlyphTitleView.Glyph1Property, "Glyph1");
+            titleView.SetBinding(GlyphTitleView.Glyph2Property, "Glyph2");
+            titleView.SetBinding(GlyphTitleView.FontFamilyProperty, "FontFamily");
+
+            NavigationPage.SetTitleView(this, titleView);
         }
     }
 }

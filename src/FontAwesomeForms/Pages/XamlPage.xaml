@@ -5,6 +5,10 @@
                      xmlns:controls="clr-namespace:FontAwesomeForms.Controls"
                      x:Class="FontAwesomeForms.Pages.XamlPage"
                      Title="{Binding Title, StringFormat='Xaml {0}'}">
+    <NavigationPage.TitleView>
+        <controls:GlyphTitleView Title="{Binding Title, StringFormat='Xaml {0}'}" Glyph1="{Binding Glyph1}" Glyph2="{Binding Glyph2}" FontFamily="FAFreeSolid"/>
+    </NavigationPage.TitleView>
+
     <ContentPage.Content>
         <CollectionView ItemsSource="{Binding Fonts}">
             <CollectionView.ItemsLayout>

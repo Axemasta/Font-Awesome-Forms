@@ -5,9 +5,15 @@ using FontAwesomeForms.Models;
 
 namespace FontAwesomeForms.ViewModels
 {
-    public class ProFontsViewModel : ViewModelBase
+    public class ProFontsViewModel : ViewModelBase, IFontViewModel
     {
         public ObservableCollection<FontInformation> Fonts { get; }
+
+        public string Glyph1 { get; } = "\uf2db";
+
+        public string Glyph2 { get; } = "\ue048";
+
+        public string FontFamily { get; } = FontConstants.FontAwesomePro.Light;
 
         public ProFontsViewModel()
         {

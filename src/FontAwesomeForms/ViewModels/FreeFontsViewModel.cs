@@ -5,9 +5,15 @@ using FontAwesomeForms.Models;
 
 namespace FontAwesomeForms.ViewModels
 {
-    public class FreeFontsViewModel : ViewModelBase
+    public class FreeFontsViewModel : ViewModelBase, IFontViewModel
     {
         public ObservableCollection<FontInformation> Fonts { get; }
+
+        public string Glyph1 { get; } = "\uf53a";
+
+        public string Glyph2 { get; } = "\uf51e";
+
+        public string FontFamily { get; } = FontConstants.FontAwesomeFree.Solid;
 
         public FreeFontsViewModel()
         {

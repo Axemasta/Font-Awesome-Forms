@@ -7,8 +7,6 @@ namespace FontAwesomeForms.Controls
 {
     public class ShowcasePanel : ContentView
     {
-
-
         public static readonly BindableProperty FontInformationProperty = BindableProperty.Create(nameof(FontInformation), typeof(FontInformation), typeof(ShowcasePanel), propertyChanged: OnValuePropertyChanged);
 
         public FontInformation FontInformation
