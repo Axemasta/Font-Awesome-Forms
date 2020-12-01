@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using FontAwesomeForms.Models;
 using FontAwesomeForms.Pages;
+using FontAwesomeForms.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,9 +13,6 @@ namespace FontAwesomeForms
         public App()
         {
             InitializeComponent();
-
-            
-
 
             MainPage = BuildRootView();
         }
@@ -32,14 +30,25 @@ namespace FontAwesomeForms
                 SelectedTabColor = Color.White,
             };
 
-            var xaml = new FreeXamlPage();
-            var code = new FreeCodePage();
+            //Free
+            var freeViewModel = new FreeFontsViewModel();
+            
+            var xamlFree = new XamlPage(freeViewModel);
+            var codeFree = new CodePage(freeViewModel);
 
             var pages = new List<FontPageBase>
             {
-                xaml,
-                code
+                xamlFree,
+                codeFree
             };
+
+            var proViewModel = new ProFontsViewModel();
+
+            var xamlPro = new XamlPage(proViewModel);
+            var codePro = new CodePage(proViewModel);
+
+            pages.Add(xamlPro);
+            pages.Add(codePro);
 
             foreach (var page in pages)
             {

@@ -7,21 +7,18 @@ using Xamarin.Forms;
 
 namespace FontAwesomeForms.Pages
 {
-    public class FreeCodePage : FontPageBase
+    public class CodePage : FontPageBase
     {
-        readonly FreeFontsViewModel viewModel;
-
-        public FreeCodePage()
+        public CodePage(object viewModel)
         {
             base.Glyph = "\uf121";
             base.FontFamily = FontConstants.FontAwesomeFree.Solid;
 
             Content = BuildView();
 
-            viewModel = new FreeFontsViewModel();
             base.BindingContext = viewModel;
 
-            Title = string.Format("Code {0}", viewModel.Title);
+            this.SetBinding(TitleProperty, "Title", stringFormat: "Code {0}");
         }
 
         View BuildView()

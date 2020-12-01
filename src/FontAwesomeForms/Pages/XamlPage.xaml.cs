@@ -6,16 +6,16 @@ using Xamarin.Forms;
 
 namespace FontAwesomeForms.Pages
 {
-    public partial class FreeXamlPage : FontPageBase
+    public partial class XamlPage : FontPageBase
     {
-        public FreeXamlPage()
+        public XamlPage(object viewModel)
         {
             InitializeComponent();
 
             base.Glyph = "\uf542";
             base.FontFamily = FontConstants.FontAwesomeFree.Solid;
 
-            base.BindingContext = new FreeFontsViewModel();
+            base.BindingContext = viewModel;
         }
     }
 }

@@ -3,10 +3,9 @@
                      xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                      xmlns:models="clr-namespace:FontAwesomeForms.Models"
                      xmlns:controls="clr-namespace:FontAwesomeForms.Controls"
-                     x:Class="FontAwesomeForms.Pages.FreeXamlPage"
+                     x:Class="FontAwesomeForms.Pages.XamlPage"
                      Title="{Binding Title, StringFormat='Xaml {0}'}">
     <ContentPage.Content>
-
         <CollectionView ItemsSource="{Binding Fonts}">
             <CollectionView.ItemsLayout>
                 <OnIdiom x:TypeArguments="GridItemsLayout">
