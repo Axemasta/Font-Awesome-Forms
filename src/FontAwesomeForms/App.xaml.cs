@@ -4,11 +4,14 @@ using FontAwesomeForms.Models;
 using FontAwesomeForms.Pages;
 using FontAwesomeForms.ViewModels;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 using Xamarin.Forms.Xaml;
+//using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 
 namespace FontAwesomeForms
 {
-    public partial class App : Application
+    public partial class App : Xamarin.Forms.Application
     {
         public App()
         {
@@ -22,7 +25,7 @@ namespace FontAwesomeForms
         {
             var barBackgroundColor = Color.FromHex("#2196F3");
 
-            var tabbed = new TabbedPage()
+            var tabbed = new Xamarin.Forms.TabbedPage()
             {
                 BarBackgroundColor = barBackgroundColor,
                 BarTextColor = Color.White,
@@ -63,14 +66,14 @@ namespace FontAwesomeForms
                     {
                         Glyph = page.Glyph,
                         FontFamily = page.FontFamily,
-                        Size = Device.GetNamedSize(NamedSize.Medium, typeof(Button))
+                        Size = Device.GetNamedSize(NamedSize.Medium, typeof(Xamarin.Forms.Button))
                     }
                 };
 
                 tabbed.Children.Add(nav);
             }
 
-
+            tabbed.On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
 
             return tabbed;
         }

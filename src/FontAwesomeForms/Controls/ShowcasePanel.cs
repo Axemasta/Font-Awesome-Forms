@@ -129,6 +129,9 @@ namespace FontAwesomeForms.Controls
 
         void OnValuePropertyChanged()
         {
+            if (FontInformation == null)
+                return;
+
             displayLabel.Text = FontInformation.FontDisplayName;
 
             icon1.FontFamily = FontInformation.FontName;
