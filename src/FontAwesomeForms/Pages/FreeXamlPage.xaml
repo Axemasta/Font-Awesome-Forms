@@ -1,15 +1,24 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <models:FontPageBase xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:models="clr-namespace:FontAwesomeForms.Models"
-             x:Class="FontAwesomeForms.Pages.FreeXamlPage"
-             Title="{Binding Title}">
+                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                     xmlns:models="clr-namespace:FontAwesomeForms.Models"
+                     xmlns:controls="clr-namespace:FontAwesomeForms.Controls"
+                     x:Class="FontAwesomeForms.Pages.FreeXamlPage"
+                     Title="{Binding Title, StringFormat='Xaml {0}'}">
     <ContentPage.Content>
 
-        <StackLayout>
-            <Label Text="Binding Page"/>
-
-            <Label Text="&#xf274;" FontFamily="FAFreeRegular"/>
-        </StackLayout>
+        <CollectionView ItemsSource="{Binding Fonts}">
+            <CollectionView.ItemsLayout>
+                <OnIdiom x:TypeArguments="GridItemsLayout">
+                    <OnIdiom.Phone><GridItemsLayout Orientation="Vertical" Span="1"/></OnIdiom.Phone>
+                    <OnIdiom.Tablet><GridItemsLayout Orientation="Vertical" Span="2"/></OnIdiom.Tablet>
+                </OnIdiom>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <controls:ShowcasePanel FontInformation="{Binding .}" Padding="10"/>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </ContentPage.Content>
 </models:FontPageBase>

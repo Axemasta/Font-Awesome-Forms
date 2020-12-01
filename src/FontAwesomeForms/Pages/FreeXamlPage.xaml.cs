@@ -15,7 +15,7 @@ namespace FontAwesomeForms.Pages
             base.Glyph = "\uf542";
             base.FontFamily = FontConstants.FontAwesomeFree.Solid;
 
-            base.BindingContext = new XamlPageViewModel();
+            base.BindingContext = new FreeFontsViewModel();
         }
     }
 }
