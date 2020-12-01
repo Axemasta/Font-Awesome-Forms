@@ -6,7 +6,7 @@
                      x:Class="FontAwesomeForms.Pages.XamlPage"
                      Title="{Binding Title, StringFormat='Xaml {0}'}">
     <NavigationPage.TitleView>
-        <controls:GlyphTitleView Title="{Binding Title, StringFormat='Xaml {0}'}" Glyph1="{Binding Glyph1}" Glyph2="{Binding Glyph2}" FontFamily="FAFreeSolid"/>
+        <controls:GlyphTitleView Title="{Binding Title, StringFormat='Xaml {0}'}" Glyph1="{Binding Glyph1}" Glyph2="{Binding Glyph2}" FontFamily="{Binding FontFamily}"/>
     </NavigationPage.TitleView>
 
     <ContentPage.Content>

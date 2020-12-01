@@ -92,9 +92,9 @@ namespace FontAwesomeForms.Models
             {
                 FontName = FontConstants.FontAwesomePro.DuoTone,
                 FontDisplayName = "Font Awesome Pro DuoTone",
-                Icon1 = "\uf8f6",
-                Icon2 = "\u10f8f6",
-                Icon3 = "\uf6ae",
+                Icon1 = "\uf047",
+                Icon2 = "\uf7e5",
+                Icon3 = "\uf77e",
                 Icon4 = "\uf6b8"
             });
 
