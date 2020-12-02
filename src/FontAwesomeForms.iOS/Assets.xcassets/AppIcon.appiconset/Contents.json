@@ -1,115 +1,126 @@
 {
   "images": [
     {
-      "scale": "2x",
-      "size": "20x20",
-      "idiom": "iphone",
-      "filename": "Icon40.png"
-    },
-    {
-      "scale": "3x",
-      "size": "20x20",
-      "idiom": "iphone",
-      "filename": "Icon60.png"
-    },
-    {
-      "scale": "2x",
-      "size": "29x29",
-      "idiom": "iphone",
-      "filename": "Icon58.png"
-    },
-    {
-      "scale": "3x",
-      "size": "29x29",
-      "idiom": "iphone",
-      "filename": "Icon87.png"
-    },
-    {
-      "scale": "2x",
-      "size": "40x40",
-      "idiom": "iphone",
-      "filename": "Icon80.png"
-    },
-    {
-      "scale": "3x",
-      "size": "40x40",
-      "idiom": "iphone",
-      "filename": "Icon120.png"
-    },
-    {
-      "scale": "2x",
-      "size": "60x60",
-      "idiom": "iphone",
-      "filename": "Icon120.png"
-    },
-    {
-      "scale": "3x",
-      "size": "60x60",
-      "idiom": "iphone",
-      "filename": "Icon180.png"
-    },
-    {
+      "filename": "appicon-ios-marketing-appstore.png",
       "scale": "1x",
-      "size": "20x20",
-      "idiom": "ipad",
-      "filename": "Icon20.png"
-    },
-    {
-      "scale": "2x",
-      "size": "20x20",
-      "idiom": "ipad",
-      "filename": "Icon40.png"
-    },
-    {
-      "scale": "1x",
-      "size": "29x29",
-      "idiom": "ipad",
-      "filename": "Icon29.png"
-    },
-    {
-      "scale": "2x",
-      "size": "29x29",
-      "idiom": "ipad",
-      "filename": "Icon58.png"
-    },
-    {
-      "scale": "1x",
-      "size": "40x40",
-      "idiom": "ipad",
-      "filename": "Icon40.png"
-    },
-    {
-      "scale": "2x",
-      "size": "40x40",
-      "idiom": "ipad",
-      "filename": "Icon80.png"
-    },
-    {
-      "scale": "1x",
-      "size": "76x76",
-      "idiom": "ipad",
-      "filename": "Icon76.png"
-    },
-    {
-      "scale": "2x",
-      "size": "76x76",
-      "idiom": "ipad",
-      "filename": "Icon152.png"
-    },
-    {
-      "scale": "2x",
-      "size": "83.5x83.5",
-      "idiom": "ipad",
-      "filename": "Icon167.png"
-    },
-    {
-      "scale": "1x",
-      "size": "1024x1024",
       "idiom": "ios-marketing",
-      "filename": "Icon1024.png"
+      "size": "1024x1024"
+    },
+    {
+      "filename": "appicon-iphone-notifications@2x.png",
+      "scale": "2x",
+      "idiom": "iphone",
+      "size": "20x20"
+    },
+    {
+      "filename": "appicon-iphone-notifications@3x.png",
+      "scale": "3x",
+      "idiom": "iphone",
+      "size": "20x20"
+    },
+    {
+      "filename": "appicon-iphone-settings@2x.png",
+      "scale": "2x",
+      "idiom": "iphone",
+      "size": "29x29"
+    },
+    {
+      "filename": "appicon-iphone-settings@3x.png",
+      "scale": "3x",
+      "idiom": "iphone",
+      "size": "29x29"
+    },
+    {
+      "filename": "appicon-iphone-spotlight@2x.png",
+      "scale": "2x",
+      "idiom": "iphone",
+      "size": "40x40"
+    },
+    {
+      "filename": "appicon-iphone-spotlight@3x.png",
+      "scale": "3x",
+      "idiom": "iphone",
+      "size": "40x40"
+    },
+    {
+      "filename": "appicon-iphone-app@2x.png",
+      "scale": "2x",
+      "idiom": "iphone",
+      "size": "60x60"
+    },
+    {
+      "filename": "appicon-iphone-app@3x.png",
+      "scale": "3x",
+      "idiom": "iphone",
+      "size": "60x60"
+    },
+    {
+      "filename": "appicon-ipad-notifications.png",
+      "scale": "1x",
+      "idiom": "ipad",
+      "size": "20x20"
+    },
+    {
+      "filename": "appicon-ipad-notifications@2x.png",
+      "scale": "2x",
+      "idiom": "ipad",
+      "size": "20x20"
+    },
+    {
+      "filename": "appicon-ipad-settings.png",
+      "scale": "1x",
+      "idiom": "ipad",
+      "size": "29x29"
+    },
+    {
+      "filename": "appicon-ipad-settings@2x.png",
+      "scale": "2x",
+      "idiom": "ipad",
+      "size": "29x29"
+    },
+    {
+      "filename": "appicon-ipad-spotlight.png",
+      "scale": "1x",
+      "idiom": "ipad",
+      "size": "40x40"
+    },
+    {
+      "filename": "appicon-ipad-spotlight@2x.png",
+      "scale": "2x",
+      "idiom": "ipad",
+      "size": "40x40"
+    },
+    {
+      "filename": "appicon-ipad-app.png",
+      "scale": "1x",
+      "idiom": "ipad",
+      "size": "76x76"
+    },
+    {
+      "filename": "appicon-ipad-app@2x.png",
+      "scale": "2x",
+      "idiom": "ipad",
+      "size": "76x76"
+    },
+    {
+      "filename": "appicon-ipad-pro-app@2x.png",
+      "scale": "2x",
+      "idiom": "ipad",
+      "size": "83.5x83.5"
+    },
+    {
+      "filename": "appicon-carplay@2x.png",
+      "scale": "2x",
+      "idiom": "carplay",
+      "size": "60x60"
+    },
+    {
+      "filename": "appicon-carplay@3x.png",
+      "scale": "3x",
+      "idiom": "carplay",
+      "size": "60x60"
     }
   ],
-  "properties": {},
   "info": {
     "version": 1,
     "author": "xcode"

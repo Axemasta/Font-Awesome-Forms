@@ -1,4 +1,7 @@
 # Font Awesome Forms
+
+<img src="assets/icons/fa-forms-icon-reverse.png" width="200">
+
 A Modern Example Of Using Fonts & Font Awesome In Xamarin Forms for Pretty & Scalable UI with less bother!
 
 - All Code Is Shared - This project demonstrates using fonts without ever touching the host platform's project 🚀
