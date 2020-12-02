@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using LightSwitch;
 using UIKit;
 
 namespace FontAwesomeForms.iOS
@@ -23,6 +24,11 @@ namespace FontAwesomeForms.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+
+#if DEBUG
+            LightSwitchAgent.Init();
+#endif
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

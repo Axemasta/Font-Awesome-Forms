@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<models:FontPageBase xmlns="http://xamarin.com/schemas/2014/forms"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                     xmlns:models="clr-namespace:FontAwesomeForms.Models"
+                     xmlns:controls="clr-namespace:FontAwesomeForms.Controls"
+                     xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+                     xmlns:fa="clr-namespace:FontAwesome"
+                     x:Class="FontAwesomeForms.Pages.MiscPage"
+                     Style="{DynamicResource contentPageDefault}"
+                     Title="Misc">
+
+    <NavigationPage.TitleView>
+        <controls:GlyphTitleView Title="Misc" Glyph1="{x:Static fa:FontAwesomeIcons.Cookie}" Glyph2="{x:Static fa:FontAwesomeIcons.MapMarked}" FontFamily="FAFreeSolid" Style="{DynamicResource glyphTitle}"/>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Padding="20" Spacing="20">
+                
+                <yummy:PancakeView Padding="30" CornerRadius="20" Style="{DynamicResource BackgroundPanel}">
+                    <StackLayout>
+                        <Label Text="You can put font into images!"/>
+
+                        <Image>
+                            <Image.Source>
+                                <FontImageSource Glyph="{x:Static fa:FontAwesomeIcons.Info}" FontFamily="FAFreeSolid" Color="{AppThemeBinding Dark={StaticResource TextColorPrimary_Dark}, Light={StaticResource TextColorPrimary_Light}}"/>
+                            </Image.Source>
+                        </Image>
+
+                        <Image HeightRequest="75">
+                            <Image.Source>
+                                <FontImageSource Glyph="{x:Static fa:FontAwesomeIcons.ObjectGroup}" FontFamily="FAFreeRegular" Color="{AppThemeBinding Dark={StaticResource TextColorPrimary_Dark}, Light={StaticResource TextColorPrimary_Light}}"/>
+                            </Image.Source>
+                        </Image>
+                    </StackLayout>
+                </yummy:PancakeView>
+
+                <yummy:PancakeView Padding="30" CornerRadius="20" Style="{DynamicResource BackgroundPanel}">
+                    <StackLayout>
+                        <Label Text="In Buttons"/>
+
+                        <Button Text="{x:Static fa:FontAwesomeIcons.Fire}" FontFamily="FAFreeSolid"/>
+
+                        <ImageButton BackgroundColor="Gray" Padding="5">
+                            <ImageButton.Source>
+                                <FontImageSource Glyph="{x:Static fa:FontAwesomeIcons.Biking}" FontFamily="FAFreeSolid" Color="{AppThemeBinding Dark={StaticResource TextColorPrimary_Dark}, Light={StaticResource TextColorPrimary_Light}}"/>
+                            </ImageButton.Source>
+                        </ImageButton>
+
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="The world is your lobster " Style="{DynamicResource formattedLabel}"/>
+                                    <Span Text="{x:Static fa:FontAwesomeIcons.GlobeEurope}" FontFamily="FAFreeSolid" Style="{DynamicResource formattedLabel}"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+                </yummy:PancakeView>
+
+                
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</models:FontPageBase>

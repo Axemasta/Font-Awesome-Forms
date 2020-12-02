@@ -1,8 +1,74 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:controls="clr-namespace:FontAwesomeForms.Controls"
              x:Class="FontAwesomeForms.App">
     <Application.Resources>
+        <ResourceDictionary>
 
+            <Color x:Key="TextColorPrimary_Dark">#FFFFFF</Color>
+            <Color x:Key="BackgroundColor_Dark">#FF000000</Color>
+            <Color x:Key="BackgroundSecondary_Dark">#3a3a3c</Color>
+
+            <Color x:Key="TextColorPrimary_Light">#FF000000</Color>
+            <Color x:Key="BackgroundColor_Light">#f8f9fa</Color>
+            <Color x:Key="BackgroundSecondary_Light">#FFFFFF</Color>
+
+            <yummy:DropShadow x:Key="lightShadow">
+                <yummy:DropShadow.Color>#333d47</yummy:DropShadow.Color>
+                <yummy:DropShadow.Opacity>0.1</yummy:DropShadow.Opacity>
+            </yummy:DropShadow>
+
+            <yummy:DropShadow x:Key="darkShadow">
+                <yummy:DropShadow.Color>#333d47</yummy:DropShadow.Color>
+                <yummy:DropShadow.Opacity>0.7</yummy:DropShadow.Opacity>
+            </yummy:DropShadow>
+
+            <Style x:Key="BackgroundPanel" TargetType="yummy:PancakeView">
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding
+                    Dark={StaticResource BackgroundSecondary_Dark},
+                    Light={StaticResource BackgroundSecondary_Light}}" />
+
+                <Setter Property="Shadow" Value="{AppThemeBinding
+                    Dark={StaticResource darkShadow},
+                    Light={StaticResource lightShadow}}" />
+            </Style>
+
+            <Style x:Key="showcasePanel" TargetType="controls:ShowcasePanel">
+                <Setter Property="PanelBackgroundColor" Value="{AppThemeBinding
+                    Dark={StaticResource BackgroundSecondary_Dark},
+                    Light={StaticResource BackgroundSecondary_Light}}" />
+
+                <Setter Property="PanelShadow" Value="{AppThemeBinding
+                    Dark={StaticResource darkShadow},
+                    Light={StaticResource lightShadow}}" />
+            </Style>
+
+            <Style x:Key="glyphTitle" TargetType="controls:GlyphTitleView">
+                <Setter Property="TitleColor" Value="{AppThemeBinding
+                    Dark={StaticResource TextColorPrimary_Light},
+                    Light={StaticResource TextColorPrimary_Dark}}" />
+            </Style>
+
+            <Style x:Key="contentPageDefault" TargetType="ContentPage">
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding
+                    Dark={StaticResource BackgroundColor_Dark},
+                    Light={StaticResource BackgroundColor_Light}}" />
+            </Style>
+
+            <Style x:Key="formattedLabel" TargetType="Span">
+                <Setter Property="TextColor" Value="{AppThemeBinding
+                    Dark={StaticResource TextColorPrimary_Dark},
+                    Light={StaticResource TextColorPrimary_Light}}" />
+            </Style>
+
+            <Style x:Key="fontIcon" TargetType="FontImageSource">
+                <Setter Property="Color" Value="{AppThemeBinding
+                    Dark={StaticResource TextColorPrimary_Dark},
+                    Light={StaticResource TextColorPrimary_Light}}" />
+            </Style>
+
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
