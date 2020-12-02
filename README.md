@@ -101,6 +101,14 @@ I made sure to provide Light / Dark mode theming so that you can witness the tru
 
 
 
+## Who Could Forget Android
+
+I could, and I did! i think I ran the app in Android twice during the entire development of the app. But everything worked which demonstrates the power of this way of implementing fonts 🥳 (although the shadows could do with some love!).
+
+![Cant forget about Android...](assets/images/android.png)
+
+
+
 ## Enhancements
 
 This repository covers most of what you can do with Font Awesome fonts, there are a few more things I would like to explore:
