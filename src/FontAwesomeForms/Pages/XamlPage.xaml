@@ -5,9 +5,10 @@
                      xmlns:controls="clr-namespace:FontAwesomeForms.Controls"
                      x:Class="FontAwesomeForms.Pages.XamlPage"
                      Title="{Binding Title, StringFormat='Xaml {0}'}"
-                     Padding="10">
+                     Padding="10"
+                     Style="{DynamicResource contentPageDefault}">
     <NavigationPage.TitleView>
-        <controls:GlyphTitleView Title="{Binding Title, StringFormat='Xaml {0}'}" Glyph1="{Binding Glyph1}" Glyph2="{Binding Glyph2}" FontFamily="{Binding FontFamily}"/>
+        <controls:GlyphTitleView Title="{Binding Title, StringFormat='Xaml {0}'}" Glyph1="{Binding Glyph1}" Glyph2="{Binding Glyph2}" FontFamily="{Binding FontFamily}" Style="{DynamicResource glyphTitle}"/>
     </NavigationPage.TitleView>
 
     <ContentPage.Content>
@@ -20,7 +21,7 @@
             </CollectionView.ItemsLayout>
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <controls:ShowcasePanel FontInformation="{Binding .}" Padding="10"/>
+                    <controls:ShowcasePanel FontInformation="{Binding .}" Padding="10" Style="{DynamicResource showcasePanel}"/>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>

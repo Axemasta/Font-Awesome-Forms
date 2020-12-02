@@ -9,10 +9,26 @@ namespace FontAwesomeForms.Controls
     {
         public static readonly BindableProperty FontInformationProperty = BindableProperty.Create(nameof(FontInformation), typeof(FontInformation), typeof(ShowcasePanel), propertyChanged: OnValuePropertyChanged);
 
+        public static readonly BindableProperty PanelBackgroundColorProperty = BindableProperty.Create(nameof(PanelBackgroundColor), typeof(Color), typeof(ShowcasePanel), propertyChanged: OnValuePropertyChanged);
+
+        public static readonly BindableProperty PanelShadowProperty = BindableProperty.Create(nameof(PanelShadow), typeof(DropShadow), typeof(ShowcasePanel), propertyChanged: OnValuePropertyChanged);
+
         public FontInformation FontInformation
         {
             get => (FontInformation)GetValue(FontInformationProperty);
             set => SetValue(FontInformationProperty, value);
+        }
+
+        public Color PanelBackgroundColor
+        {
+            get => (Color)GetValue(PanelBackgroundColorProperty);
+            set => SetValue(PanelBackgroundColorProperty, value);
+        }
+
+        public DropShadow PanelShadow
+        {
+            get => (DropShadow)GetValue(PanelShadowProperty);
+            set => SetValue(PanelShadowProperty, value);
         }
 
         static void OnValuePropertyChanged(BindableObject bindable, object oldValue, object newValue)
@@ -25,6 +41,17 @@ namespace FontAwesomeForms.Controls
             {
                 new RowDefinition() { Height = GridLength.Auto },
                 new RowDefinition() { Height = GridLength.Auto }
+            }
+        };
+
+        PancakeView contentPancake { get; } = new PancakeView()
+        {
+            CornerRadius = 20,
+            BackgroundColor = Color.Default,
+            Shadow = new DropShadow()
+            {
+                Color = Color.FromHex("#333d47"),
+                Opacity = 0.1f
             }
         };
 
@@ -90,16 +117,7 @@ namespace FontAwesomeForms.Controls
 
         View BuildView()
         {
-            var contentPancake = new PancakeView()
-            {
-                CornerRadius = 20,
-                BackgroundColor = Color.White,
-                Shadow = new DropShadow()
-                {
-                     Color = Color.FromHex("#333d47"),
-                     Opacity = 0.1f
-                }
-            };
+            
 
             Grid.SetRow(icon1, 0);
             Grid.SetRow(icon2, 0);
@@ -129,20 +147,23 @@ namespace FontAwesomeForms.Controls
 
         void OnValuePropertyChanged()
         {
-            if (FontInformation == null)
-                return;
+            if (FontInformation != null)
+            {
+                displayLabel.Text = FontInformation.FontDisplayName;
 
-            displayLabel.Text = FontInformation.FontDisplayName;
+                icon1.FontFamily = FontInformation.FontName;
+                icon2.FontFamily = FontInformation.FontName;
+                icon3.FontFamily = FontInformation.FontName;
+                icon4.FontFamily = FontInformation.FontName;
 
-            icon1.FontFamily = FontInformation.FontName;
-            icon2.FontFamily = FontInformation.FontName;
-            icon3.FontFamily = FontInformation.FontName;
-            icon4.FontFamily = FontInformation.FontName;
+                icon1.Text = FontInformation.Icon1;
+                icon2.Text = FontInformation.Icon2;
+                icon3.Text = FontInformation.Icon3;
+                icon4.Text = FontInformation.Icon4;
+            }
 
-            icon1.Text = FontInformation.Icon1;
-            icon2.Text = FontInformation.Icon2;
-            icon3.Text = FontInformation.Icon3;
-            icon4.Text = FontInformation.Icon4;
+            contentPancake.BackgroundColor = PanelBackgroundColor;
+            contentPancake.Shadow = PanelShadow;
         }
     }
 }

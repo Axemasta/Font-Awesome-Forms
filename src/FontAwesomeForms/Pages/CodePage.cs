@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using FontAwesomeForms.Controls;
+using FontAwesomeForms.Helpers;
 using FontAwesomeForms.Models;
 using FontAwesomeForms.ViewModels;
 using Xamarin.Forms;
@@ -16,8 +17,11 @@ namespace FontAwesomeForms.Pages
 
             this.Padding = new Thickness(10);
 
+            
             Content = BuildView();
 
+            StyleHelper.SetStyle(this, "contentPageDefault");
+            
             base.BindingContext = viewModel;
 
             this.SetBinding(TitleProperty, "Title", stringFormat: "Code {0}");
@@ -51,6 +55,8 @@ namespace FontAwesomeForms.Pages
 
                 panel.SetBinding(ShowcasePanel.FontInformationProperty, ".");
 
+                StyleHelper.SetStyle(panel, "showcasePanel");
+
                 return panel;
             });
 
@@ -65,6 +71,8 @@ namespace FontAwesomeForms.Pages
             titleView.SetBinding(GlyphTitleView.Glyph1Property, "Glyph1");
             titleView.SetBinding(GlyphTitleView.Glyph2Property, "Glyph2");
             titleView.SetBinding(GlyphTitleView.FontFamilyProperty, "FontFamily");
+
+            StyleHelper.SetStyle(titleView, "glyphTitle");
 
             NavigationPage.SetTitleView(this, titleView);
         }

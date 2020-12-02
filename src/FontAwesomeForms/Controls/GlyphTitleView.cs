@@ -15,6 +15,8 @@ namespace FontAwesomeForms.Controls
 
         public static readonly BindableProperty FontFamilyProperty = BindableProperty.Create(nameof(FontFamily), typeof(string), typeof(GlyphTitleView), propertyChanged: (bindable, oldVal, newVal) => ((GlyphTitleView)bindable).OnFontFamilyChanged((string)newVal));
 
+        public static readonly BindableProperty TitleColorProperty = BindableProperty.Create(nameof(TitleColor), typeof(Color), typeof(GlyphTitleView), Color.Default, propertyChanged: OnValuePropertyChanged);
+
         public string Title
         {
             get => (string)GetValue(TitleProperty);
@@ -39,6 +41,12 @@ namespace FontAwesomeForms.Controls
             set => SetValue(FontFamilyProperty, value);
         }
 
+        public Color TitleColor
+        {
+            get => (Color)GetValue(TitleColorProperty);
+            set => SetValue(TitleColorProperty, value);
+        }
+
         static void OnValuePropertyChanged(BindableObject bindable, object oldValue, object newValue)
             => ((GlyphTitleView)bindable).OnValuePropertyChanged();
 
@@ -56,8 +64,6 @@ namespace FontAwesomeForms.Controls
 
         Label titleLabel { get; } = new Label
         {
-            //Text = "Code Fonts",
-            TextColor = Color.White,
             FontSize = Device.GetNamedSize(NamedSize.Title, typeof(Label)),
             VerticalOptions = LayoutOptions.Center,
             VerticalTextAlignment = TextAlignment.Center,
@@ -99,6 +105,8 @@ namespace FontAwesomeForms.Controls
             {
                 titleLabel.FormattedText.Spans[2].Text = Glyph2;
             }
+
+            titleLabel.TextColor = TitleColor;
         }
 
         void OnFontFamilyChanged(string fontFamily)
