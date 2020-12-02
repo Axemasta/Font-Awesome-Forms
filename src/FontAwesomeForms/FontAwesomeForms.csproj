@@ -29,23 +29,9 @@
     <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="Resources\Font Awesome Free\FontAwesome5FreeSolid.otf" />
-    <None Remove="Resources\Font Awesome Free\FontAwesome5FreeRegular.otf" />
-    <None Remove="Resources\Font Awesome Free\FontAwesome5FreeBrands.otf" />
-    <None Remove="Resources\Font Awesome Pro\FontAwesome5ProBrands.otf" />
-    <None Remove="Resources\Font Awesome Pro\FontAwesome5ProLight.otf" />
-    <None Remove="Resources\Font Awesome Pro\FontAwesome5ProDuotone.otf" />
-    <None Remove="Resources\Font Awesome Pro\FontAwesome5ProRegular.otf" />
-    <None Remove="Resources\Font Awesome Pro\FontAwesome5ProSolid.otf" />
+    <None Remove="Resources\**\*.otf" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Font Awesome Free\FontAwesome5FreeSolid.otf" />
-    <EmbeddedResource Include="Resources\Font Awesome Free\FontAwesome5FreeRegular.otf" />
-    <EmbeddedResource Include="Resources\Font Awesome Free\FontAwesome5FreeBrands.otf" />
-    <EmbeddedResource Include="Resources\Font Awesome Pro\FontAwesome5ProBrands.otf" />
-    <EmbeddedResource Include="Resources\Font Awesome Pro\FontAwesome5ProLight.otf" />
-    <EmbeddedResource Include="Resources\Font Awesome Pro\FontAwesome5ProDuotone.otf" />
-    <EmbeddedResource Include="Resources\Font Awesome Pro\FontAwesome5ProRegular.otf" />
-    <EmbeddedResource Include="Resources\Font Awesome Pro\FontAwesome5ProSolid.otf" />
+    <EmbeddedResource Include="Resources\**\*.otf" />
   </ItemGroup>
 </Project>
