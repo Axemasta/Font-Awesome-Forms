@@ -6,7 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
-using LightSwitch;
+//using LightSwitch;
 
 namespace FontAwesomeForms.Droid
 {
@@ -23,9 +23,9 @@ namespace FontAwesomeForms.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 
-#if DEBUG
-            LightSwitchAgent.Init();
-#endif
+//#if DEBUG
+//            LightSwitchAgent.Init();
+//#endif
 
             LoadApplication(new App());
         }
