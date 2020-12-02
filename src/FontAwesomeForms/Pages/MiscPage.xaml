@@ -15,43 +15,50 @@
 
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout Padding="20">
-                <Label Text="You can put font into images!"/>
-
+            <StackLayout Padding="20" Spacing="20">
+                
                 <yummy:PancakeView Padding="30" CornerRadius="20" Style="{DynamicResource BackgroundPanel}">
-                    <Label Text="I am some content"/>
+                    <StackLayout>
+                        <Label Text="You can put font into images!"/>
+
+                        <Image>
+                            <Image.Source>
+                                <FontImageSource Glyph="{x:Static fa:FontAwesomeIcons.Info}" FontFamily="FAFreeSolid" Color="{AppThemeBinding Dark={StaticResource TextColorPrimary_Dark}, Light={StaticResource TextColorPrimary_Light}}"/>
+                            </Image.Source>
+                        </Image>
+
+                        <Image HeightRequest="75">
+                            <Image.Source>
+                                <FontImageSource Glyph="{x:Static fa:FontAwesomeIcons.ObjectGroup}" FontFamily="FAFreeRegular" Color="{AppThemeBinding Dark={StaticResource TextColorPrimary_Dark}, Light={StaticResource TextColorPrimary_Light}}"/>
+                            </Image.Source>
+                        </Image>
+                    </StackLayout>
                 </yummy:PancakeView>
 
-                <Image>
-                    <Image.Source>
-                        <FontImageSource Glyph="{x:Static fa:FontAwesomeIcons.Info}" FontFamily="FAFreeSolid" Color="{AppThemeBinding Dark={StaticResource TextColorPrimary_Dark}, Light={StaticResource TextColorPrimary_Light}}"/>
-                    </Image.Source>
-                </Image>
+                <yummy:PancakeView Padding="30" CornerRadius="20" Style="{DynamicResource BackgroundPanel}">
+                    <StackLayout>
+                        <Label Text="In Buttons"/>
 
-                <Image HeightRequest="75">
-                    <Image.Source>
-                        <FontImageSource Glyph="{x:Static fa:FontAwesomeIcons.ObjectGroup}" FontFamily="FAFreeRegular" Color="{AppThemeBinding Dark={StaticResource TextColorPrimary_Dark}, Light={StaticResource TextColorPrimary_Light}}"/>
-                    </Image.Source>
-                </Image>
+                        <Button Text="{x:Static fa:FontAwesomeIcons.Fire}" FontFamily="FAFreeSolid"/>
 
-                <Label Text="Buttons"/>
+                        <ImageButton BackgroundColor="Gray" Padding="5">
+                            <ImageButton.Source>
+                                <FontImageSource Glyph="{x:Static fa:FontAwesomeIcons.Biking}" FontFamily="FAFreeSolid" Color="{AppThemeBinding Dark={StaticResource TextColorPrimary_Dark}, Light={StaticResource TextColorPrimary_Light}}"/>
+                            </ImageButton.Source>
+                        </ImageButton>
 
-                <Button Text="{x:Static fa:FontAwesomeIcons.Fire}" FontFamily="FAFreeSolid"/>
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="The world is your lobster " Style="{DynamicResource formattedLabel}"/>
+                                    <Span Text="{x:Static fa:FontAwesomeIcons.GlobeEurope}" FontFamily="FAFreeSolid" Style="{DynamicResource formattedLabel}"/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+                </yummy:PancakeView>
 
-                <ImageButton BackgroundColor="Gray" Padding="5">
-                    <ImageButton.Source>
-                        <FontImageSource Glyph="{x:Static fa:FontAwesomeIcons.Biking}" FontFamily="FAFreeSolid" Color="{AppThemeBinding Dark={StaticResource TextColorPrimary_Dark}, Light={StaticResource TextColorPrimary_Light}}"/>
-                    </ImageButton.Source>
-                </ImageButton>
-
-                <Label>
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <Span Text="The world is your lobster " Style="{DynamicResource formattedLabel}"/>
-                            <Span Text="{x:Static fa:FontAwesomeIcons.GlobeEurope}" FontFamily="FAFreeSolid" Style="{DynamicResource formattedLabel}"/>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>
+                
 
             </StackLayout>
         </ScrollView>
